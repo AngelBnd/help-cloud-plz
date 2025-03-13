@@ -208,7 +208,27 @@ h1.aboutme{
     padding: 0 !important;
 }
 
+#cloud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 150px;
+    z-index: 1;
+    background: url('assets/cloud.png') repeat-x;
+    background-size: contain;
+    filter: brightness(0) invert(1); 
+    animation: moveClouds 100s linear infinite;
+}
 
+@keyframes moveClouds {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
 @media (max-width:780px){
     h1.aboutme{
         position: absolute;   
@@ -243,5 +263,8 @@ h1.aboutme{
         margin-top : 30px;
         padding-left: 0px !important;
         margin-left: 23px !important; 
+    }
+    #cloud {
+        height: 100px;
     }
 }
